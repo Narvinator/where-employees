@@ -8,7 +8,8 @@ Where Employees? Is an app that was designed with Node.js, inquirer, and MYSQL. 
 
 ## Video of Usage
 
-[Uploading Untitled_ Nov 1, 2023 1_21 AM.webm…]()
+[Untitled_ Nov 1, 2023 1_21 AM.webm](https://github.com/Narvinator/where-employees/assets/144052327/42d58501-39eb-4eff-a50b-5f6fae7cea35)
+
 
 
 ## Installtion
