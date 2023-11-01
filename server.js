@@ -15,7 +15,7 @@ let employee_tracker = function () {
         choices: ['View all departments', 'View all roles', 'View all employees', 'Add a department', 'Add a role', 'Add an employee', 'Update an employee role', 'Log Out']
     }]).then((answers) => {
         if (answers.prompt === 'View all departments') {
-            db.query(`SELECT * FROM department`, (err, result) => {
+            db.query(`SELECT * FROM departments`, (err, result) => {
                 if (err) throw err;
                 console.log("Viewing all departments: ");
                 console.table(result);
