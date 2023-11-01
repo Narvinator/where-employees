@@ -12,12 +12,12 @@ let employee_tracker = function () {
         type: 'list',
         name: 'prompt',
         message: 'Select from the following.',
-        choices: ['View all departments', 'View all roles', 'View all employees', 'Add a department', 'Add a role', 'Add an employee', 'Update an employee role', 'Log Out']
+        choices: ['View all department', 'View all roles', 'View all employees', 'Add a department', 'Add a role', 'Add an employee', 'Update an employee role', 'Log Out']
     }]).then((answers) => {
-        if (answers.prompt === 'View all departments') {
-            db.query(`SELECT * FROM departments`, (err, result) => {
+        if (answers.prompt === 'View all department') {
+            db.query(`SELECT * FROM department`, (err, result) => {
                 if (err) throw err;
-                console.log("Viewing all departments: ");
+                console.log("Viewing all departments");
                 console.table(result);
                 employee_tracker();
             });
