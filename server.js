@@ -57,8 +57,8 @@ let employee_tracker = function () {
             })
         } else if (answers.prompt === 'Add a role') {
             db.query(`SELECT * FROM department`, (err, result) => {
-                
-                if (err) throw err; 
+
+                if (err) throw err;
 
                 inquirer.prompt([
                     {
@@ -227,11 +227,16 @@ let employee_tracker = function () {
                         }
                     }
 
-                    db.query(`UPDATE employee SET ? WHERE ?`, [{role_id: role}, {last_name: name}], (err, result) => {
+                    db.query(`UPDATE employee SET ? WHERE ?`, [{ role_id: role }, { last_name: name }], (err, result) => {
                         if (err) throw err;
                         console.log(`Updated ${answers.employee} role to the database.`)
                         employee_tracker();
                     });
                 })
-            })
-};})}
+            });
+        } else if (answers.prompt === 'Log Out') {
+            db.end();
+            console.log("See Ya Later 😛 ");
+        }
+    })
+};
